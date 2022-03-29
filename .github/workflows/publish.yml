@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
 env:
-  IMAGE: ghcr.io/jcansdale-test-myorg/ghcr-publish-to-org2:latest
+  IMAGE: ghcr.io/mutantdesign/ghcr-publish-to-org2:latest
 
 jobs:
   publish:
