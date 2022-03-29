@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
 env:
-  IMAGE: ghcr.io/jcansdale-test/with-label-and-pat:latest
+  IMAGE: ghcr.io/jcansdale-test/first4:latest
 
 jobs:
   publish:
@@ -17,7 +17,7 @@ jobs:
           echo 'FROM alpine' > Dockerfile
           echo 'ENTRYPOINT ["echo", "Hello from ${{ github.repository }}!"]' >> Dockerfile
           echo 'LABEL org.opencontainers.image.description "This image was built from commit ${{ github.sha }}"' >> Dockerfile
-          echo 'LABEL org.opencontainers.image.source=https://github.com/jcansdale-test/ghcr-publish-to-org2' >> Dockerfile
+          echo 'LABEL org.opencontainers.image.source=https://github.com/foo/bar' >> Dockerfile
 
       - name: Build image
         run: docker build . -t ${IMAGE,,} # lowercase IMAGE
