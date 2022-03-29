@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
 env:
-  IMAGE: ghcr.io/jcansdale-test/first3:latest
+  IMAGE: ghcr.io/jcansdale-test/with-label-and-pat:latest
 
 jobs:
   publish:
